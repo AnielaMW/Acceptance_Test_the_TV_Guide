@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Add Show Details</title>
+  </head>
+
+  <body>
+    <h1>Add Show Details</h1>
+
+    <% if flash[:error] %>
+      <%= flash[:error] %>
+    <% end %>
+
+    <form action="/television-shows/new" method="post">
+
+      <label for="title">Title:</label>
+      <input type="text" id="title" name="title" value="<%= params[:title] %>"><BR><BR>
+
+      <label for="network">Network:</label>
+      <input type="text" id="network" name="network" value="<%= params[:network] %>"><BR><BR>
+
+      <label for="starting_year">Starting Year:</label>
+      <input type="text" id="starting_year" name="starting_year" value="<%= params[:starting_year] %>"><BR><BR>
+
+      <label for="synopsis">Synopsis:</label>
+      <input type="text" id="synopsis" name="synopsis" value="<%= params[:synopsis] %>"><BR><BR>
+
+      <label for="genre">Genre: </label>
+      <select id="genre" name="genre">
+        <option value=""></option>
+        <option value="action">Action</option>
+        <option value="comedy">Comedy</option>
+        <option value="drama">Drama</option>
+        <option value="fantasy">Fantasy</option>
+        <option value="mystery">Mystery</option>
+      </select></input><BR><BR>
+
+      <input type="submit" value="Add TV Show">
+
+      <p>
+        <a href="/television_shows/new">Clear Choice</a>
+      </p>
+    </form>
+  </body>
+</html>

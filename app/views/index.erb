@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>List of Shows</title>
+  </head>
+
+  <body>
+    <h1>List of Shows</h1>
+
+    <ul>
+      <% @shows.each do |show| %>
+        <li><%= show.title %> (<%= show.network %>)</h3>
+        </li>
+      <% end %>
+    </ul>
+
+    <p>
+      <a href="/television_shows/new">Add New Shows</a>
+    </p>
+
+  </body>
+</html>
